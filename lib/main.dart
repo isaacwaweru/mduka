@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:courier_app/signUp.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:courier_app/login.dart';
 
 void main() => runApp(
   MaterialApp(
     debugShowCheckedModeBanner: false,
     home: GetStarted(),
+    theme: ThemeData(
+      primaryColor: Color(0xff282662),
+    ),
   )
 );
 
@@ -49,6 +53,10 @@ class _GetStartedState extends State<GetStarted> {
             ),
             color: Color(0xff282662),
             onPressed: () async {
+              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Login()),
+                              );
             },
             child: Text(
                 'SIGN IN',
